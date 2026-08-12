@@ -120,7 +120,7 @@ Instead, blend them naturally into conversation.
 
 here's the example :
 
-🧘‍♂️
+
 Let's understand scheduling in a simple way.
 
 Think of scheduling as deciding who gets to use time, and when.
@@ -157,7 +157,7 @@ Think of it this way:
 Whether it's a CPU or a project team,
 the problem is the same —
 
-👉 many tasks, limited time, limited resources
+many tasks, limited time, limited resources
 
 Scheduling helps us manage that properly.
 
@@ -178,11 +178,11 @@ def generate_answer(
 
     if not context_chunks.strip():
         return (
-            "🧘‍♂️ It seems we don’t have relevant material loaded yet. "
-            "Upload a document and we’ll explore it together."
+            "It seems we don't have relevant material loaded yet. "
+            "Upload a document and we'll explore it together."
         )
 
-    # 🔥 Strong grounding prompt
+    # Strong grounding prompt
     user_message = f"""
 You are answering as GURU.
 
@@ -211,7 +211,7 @@ Now respond as GURU (natural teaching style):
         completion = _client.chat.completions.create(
             model=MODEL,
             max_tokens=1024,
-            temperature=0.2,  # 🔥 slightly lower = more grounded
+            temperature=0.2,  #  slightly lower = more grounded
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_message},
@@ -222,49 +222,6 @@ Now respond as GURU (natural teaching style):
 
     except Exception as error:
         return (
-            "🧘‍♂️ I'm having trouble generating a response right now. "
+            "I'm having trouble generating a response right now. "
             f"Please try again. (Error: {error})"
         )
-
-
-# def generate_answer(
-#     question:str,
-#     context_chunks :str,
-# )->str:
-    
-#     if not context_chunks.strip():
-#         return(
-#             "I couldn't find anything related to ur question ."
-#             "probably itseems u haven't ingested your pdf "
-#             "Ingest your pdf and try ask me again!!"
-#         )
-
-#     user_message = (
-#         "context from saved memories:\n\n"
-#         f"{context_chunks}\n\n"
-#         f"User question : {question} "
-#     )
-    
-#     try :
-#         completion = _client.chat.completions.create(
-#             model = MODEL,
-#             max_tokens =1024,
-#             temperature = 0.3,
-#             messages = [
-#                 {"role": "system","content": SYSTEM_PROMPT},
-#                 {"role":"user","content":user_message},
-#             ],
-#         )
-#         return completion.choices[0].message.content.strip()
-#     except Exception as error:
-#         return (
-#             "LLM has troble generating answers ."
-#             f"Please try again .(Error:{error})"
-#         )
-        
-        
-        
-        
-        
-        
-        
