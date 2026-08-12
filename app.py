@@ -107,7 +107,7 @@ def stream_response(text):
 
 # ---------------- MAIN APP ----------------
 def main():
-    st.set_page_config(page_title="PDF GURU", page_icon="📚", layout="wide")
+    st.set_page_config(page_title="PDF.AI", page_icon="📚", layout="wide")
 
     # --- session ---
     if "chat_history" not in st.session_state:
@@ -120,8 +120,8 @@ def main():
     # --- header ---
     st.markdown(
         """
-        <h1 style='text-align: center;'>📚 PDF GURU</h1>
-        <p style='text-align: center;'>Learn from your documents like a student with a guru 🧠</p>
+        <h1 style='text-align: center;'>📚 PDF.AI</h1>
+        <p style='text-align: center;'>Learn from your documents .</p>
         """,
         unsafe_allow_html=True
     )
@@ -142,7 +142,7 @@ def main():
 
         # assistant
         with st.chat_message("assistant"):
-            with st.spinner("GURU is thinking... 🧘"):
+            with st.spinner(" Response generating...!"):
 
                 if not vector_ready:
                     response = (
@@ -177,7 +177,7 @@ def main():
                     response = stream_response(answer)
 
         st.session_state.chat_history.append(
-            {"role": "assistant", "content": f"🧘‍♂️ {response}"}
+            {"role": "assistant", "content": f" {response}"}
         )
 
     # ---------------- SIDEBAR ----------------
