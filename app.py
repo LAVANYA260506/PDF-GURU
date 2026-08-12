@@ -96,11 +96,11 @@ def stream_response(text):
 
         for word in words:
             line_text += word + " "
-            placeholder.markdown(f"🧘‍♂️ {full_text + line_text}")
+            placeholder.markdown(f"{full_text + line_text}")
             time.sleep(0.03)
 
         full_text += line_text + "\n\n"
-        placeholder.markdown(f"🧘‍♂️ {full_text}")
+        placeholder.markdown(f"{full_text}")
         time.sleep(0.1)  # pause between sections
 
     return full_text
