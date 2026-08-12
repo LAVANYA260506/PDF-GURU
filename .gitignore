@@ -1,0 +1,4 @@
+/.env
+/chromadb
+/.vscode
+/__pycache__
