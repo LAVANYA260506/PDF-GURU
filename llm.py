@@ -210,7 +210,7 @@ Now respond as GURU (natural teaching style):
     try:
         completion = _client.chat.completions.create(
             model=MODEL,
-            max_tokens=1024,
+            max_tokens=800,
             temperature=0.2,  #  slightly lower = more grounded
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
