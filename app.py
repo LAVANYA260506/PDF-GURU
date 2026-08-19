@@ -77,7 +77,7 @@ def retrieve(query):
 
     results = collection.query(
         query_embeddings=[query_vec],
-        n_results=5,
+        n_results=3,
         include=["documents"]
     )
 
