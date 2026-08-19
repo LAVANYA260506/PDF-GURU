@@ -6,7 +6,7 @@ from groq import Groq
 load_dotenv()
 
 groq_api_key = os.getenv("groq_api_key")
-MODEL = "llama-3.1-8b-instant"
+MODEL = "openai/gpt-oss-120b"
 
 SYSTEM_PROMPT =  """
 You are GURU — a calm, knowledgeable teacher who explains concepts in a natural, conversational way.
